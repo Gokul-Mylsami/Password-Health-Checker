@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.HBox?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.passwordstrength.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <Label fx:id="uniquePassword" />
+    <Label fx:id="passwordHealth" />
+    <HBox spacing="5">
+     <PasswordField promptText="Password" fx:id="passwordField" onKeyReleased="#onPasswordType"  />
+     <Button text="Submit" onAction="#submitPassword"/>
+    </HBox>
+
+
+    <Label fx:id="passwordLengthCheck" text="Above 12 Characters" />
+    <Label fx:id="startWithCharacter" text="Start with Char" />
+    <Label fx:id="containSpecialCharacter" text="Contain Special Char" />
+    <Label fx:id="containCapitalCharacter" text="Contain Capital Char" />
+    <Label fx:id="containNumber" text="Contain Number" />
+
+</VBox>
